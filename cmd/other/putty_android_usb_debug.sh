@@ -1,0 +1,1 @@
+putty 192.168.5.234 -l root -pw _Ll168888 -m /home/lb/Desktop/code/Hospital/cmd/android_usb_debug.sh

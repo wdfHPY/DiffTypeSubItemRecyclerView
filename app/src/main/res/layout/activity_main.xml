@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_700"
+    tools:context=".MainActivity">
+
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeOne
+        android:id="@+id/typeOne"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#FEFEFE"
+        app:itemMainText="005号主机之门口机列表"
+        app:itemMainTextColor="@color/black"
+        app:itemMainTextMarginStart="53dp"
+        app:itemMainTextMarginTop="12dp"
+        app:itemMainTextSize="22sp"
+        app:itemSelectAllTMarginStart="333dp"
+        app:itemSelectAllTextColor="#F88D2D"
+        app:itemSelectAllTextSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/itemCusTwo"
+        app:layout_constraintTop_toTopOf="@+id/itemCusTwo" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeTwo
+        android:id="@+id/itemCusTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemText="005002(描述信息描述信息信息)"
+        app:itemTextColor="@color/black"
+        app:itemTextMarginStart="26dp"
+        app:itemTextMarginTop="12dp"
+        app:itemTextSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeOne" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/itemCusThree"
+        app:layout_constraintTop_toTopOf="@+id/itemCusThree" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeThree
+        android:id="@+id/itemCusThree"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemText="005002(描述信息描述信息信息)"
+        app:itemTextColor="@color/black"
+        app:itemTextMarginStart="26dp"
+        app:itemTextMarginTop="12dp"
+        app:itemTextSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCusTwo" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeFour
+        android:id="@+id/itemCusFour"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemFiveButtonColor="#355EDC"
+        app:itemFiveButtonLength="17dp"
+        app:itemFiveButtonMarginStart="26dp"
+        app:itemFiveButtonMarginTop="17dp"
+        app:itemFiveText="006号主机值门口机"
+        app:itemFiveTextColor="@color/black"
+        app:itemFiveTextMarginStart="58dp"
+        app:itemFiveTextMarginTop="17dp"
+        app:itemFiveTextSize="22sp"
+        app:itemFiveSelectAllTextSize="22sp"
+        app:itemFiveSelectAllTextMarginStart="333dp"
+        app:itemFiveSelectAllTextColor="#F88D2D"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCusThree" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeFive
+        android:id="@+id/itemCusFive"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemFiveButtonColor="#355EDC"
+        app:itemFiveButtonLength="17dp"
+        app:itemFiveButtonMarginStart="26dp"
+        app:itemFiveButtonMarginTop="17dp"
+        app:itemFiveText="006号主机值门口机"
+        app:itemFiveTextColor="@color/black"
+        app:itemFiveTextMarginStart="58dp"
+        app:itemFiveTextMarginTop="17dp"
+        app:itemFiveTextSize="22sp"
+        app:itemFiveSelectAllTextSize="22sp"
+        app:itemFiveSelectAllTextMarginStart="333dp"
+        app:itemFiveSelectAllTextColor="#F88D2D"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCusFour" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeSix
+        android:id="@+id/itemCusSix"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemFiveButtonColor="#355EDC"
+        app:itemFiveButtonLength="17dp"
+        app:itemFiveButtonMarginStart="26dp"
+        app:itemFiveButtonMarginTop="17dp"
+        app:itemFiveText="006号主机值门口机"
+        app:itemFiveTextColor="@color/black"
+        app:itemFiveTextMarginStart="58dp"
+        app:itemFiveTextMarginTop="17dp"
+        app:itemFiveTextSize="22sp"
+        app:itemFiveSelectAllTextSize="22sp"
+        app:itemFiveSelectAllTextMarginStart="333dp"
+        app:itemFiveSelectAllTextColor="#F88D2D"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCusFive" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeSeven
+        android:id="@+id/itemCusSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemFiveButtonColor="#355EDC"
+        app:itemFiveButtonLength="17dp"
+        app:itemFiveButtonMarginStart="26dp"
+        app:itemFiveButtonMarginTop="17dp"
+        app:itemFiveText="006号主机值门口机"
+        app:itemFiveTextColor="@color/black"
+        app:itemFiveTextMarginStart="58dp"
+        app:itemFiveTextMarginTop="17dp"
+        app:itemFiveTextSize="22sp"
+        app:itemFiveSelectAllTextSize="22sp"
+        app:itemFiveSelectAllTextMarginStart="333dp"
+        app:itemFiveSelectAllTextColor="#F88D2D"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCusSix" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeEight
+        android:id="@+id/itemCusEight"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemFourButtonColor="#355EDC"
+        app:itemFourButtonLength="17dp"
+        app:itemFourButtonMarginStart="26dp"
+        app:itemFourButtonMarginTop="17dp"
+        app:itemFourText="006号主机值门口机"
+        app:itemFourTextColor="@color/black"
+        app:itemFourTextMarginStart="58dp"
+        app:itemFourTextMarginTop="17dp"
+        app:itemFourTextSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCusSeven" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeNine
+        android:id="@+id/itemCusNine"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemFourButtonColor="#355EDC"
+        app:itemFourButtonLength="17dp"
+        app:itemFourButtonMarginStart="26dp"
+        app:itemFourButtonMarginTop="17dp"
+        app:itemFourText="006号主机值门口机"
+        app:itemFourTextColor="@color/black"
+        app:itemFourTextMarginStart="58dp"
+        app:itemFourTextMarginTop="17dp"
+        app:itemFourTextSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCusEight" />
+
+    <top.wangdf.difftypesubitemrecyclerview.ToBeSelectedTypeTen
+        android:id="@+id/itemCusTen"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="53dp"
+        android:background="@color/white"
+        app:itemFourButtonColor="#355EDC"
+        app:itemFourButtonLength="17dp"
+        app:itemFourButtonMarginStart="26dp"
+        app:itemFourButtonMarginTop="17dp"
+        app:itemFourText="006号主机值门口机"
+        app:itemFourTextColor="@color/black"
+        app:itemFourTextMarginStart="58dp"
+        app:itemFourTextMarginTop="17dp"
+        app:itemFourTextSize="22sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCusNine" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

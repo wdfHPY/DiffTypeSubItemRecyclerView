@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 待选设备自定义View类型一 -->
+    <declare-styleable name="ToBeSelectedTypeOne">
+        <!-- 子项背景颜色 -->
+        <attr name="itemBackgroundColor" format="color" />
+        <!-- 子项内容-->
+        <attr name="itemMainText" format="string" />
+        <!-- 子项内容大小-->
+        <attr name="itemMainTextSize" format="dimension" />
+        <!-- 子项内容颜色-->
+        <attr name="itemMainTextColor" format="color" />
+        <!-- 子项内容左距离-->
+        <attr name="itemMainTextMarginStart" format="dimension" />
+        <!-- 字体内容上距离-->
+        <attr name="itemMainTextMarginTop" format="dimension" />
+        <!-- 全选颜色-->
+        <attr name="itemSelectAllTextColor" format="color" />
+        <!-- 全选按钮文字大小-->
+        <attr name="itemSelectAllTextSize" format="dimension" />
+        <!-- 全选按钮左距离-->
+        <attr name="itemSelectAllTMarginStart" format="dimension" />
+    </declare-styleable>
+
+    <!-- 待选设备自定义View类型二/三-->
+    <declare-styleable name="ToBeSelectedTypeTwo">
+        <!-- 子项内容-->
+        <attr name="itemText" format="string" />
+        <!-- 子项内容大小-->
+        <attr name="itemTextSize" format="dimension" />
+        <!-- 子项内容颜色-->
+        <attr name="itemTextColor" format="color" />
+        <!-- 子项内容左距离-->
+        <attr name="itemTextMarginStart" format="dimension" />
+        <!-- 字体内容上距离-->
+        <attr name="itemTextMarginTop" format="dimension" />
+    </declare-styleable>
+
+    <!-- 已选设备自定义类型四/五-->
+    <declare-styleable name="ToBeSelectedTypeFour">
+        <!-- 子项内容-->
+        <attr name="itemFourText" format="string" />
+        <!-- 子项内容大小-->
+        <attr name="itemFourTextSize" format="dimension" />
+        <!-- 子项内容颜色-->
+        <attr name="itemFourTextColor" format="color" />
+        <!-- 控制按钮左距离-->
+        <attr name="itemFourButtonMarginStart" format="dimension" />
+        <!-- 控制按钮上距离-->
+        <attr name="itemFourButtonMarginTop" format="dimension" />
+        <!-- 控制按钮边框颜色-->
+        <attr name="itemFourButtonColor" format="color" />
+        <!-- 控制按钮边框长度-->
+        <attr name="itemFourButtonLength" format="dimension" />
+        <!-- 子项内容左距离-->
+        <attr name="itemFourTextMarginStart" format="dimension" />
+        <!-- 字体内容上距离-->
+        <attr name="itemFourTextMarginTop" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ToBeSelectedTypeFive">
+        <!-- 子项内容-->
+        <attr name="itemFiveText" format="string" />
+        <!-- 子项内容大小-->
+        <attr name="itemFiveTextSize" format="dimension" />
+        <!-- 子项内容颜色-->
+        <attr name="itemFiveTextColor" format="color" />
+        <!-- 控制按钮左距离-->
+        <attr name="itemFiveButtonMarginStart" format="dimension" />
+        <!-- 控制按钮上距离-->
+        <attr name="itemFiveButtonMarginTop" format="dimension" />
+        <!-- 控制按钮边框颜色-->
+        <attr name="itemFiveButtonColor" format="color" />
+        <!-- 控制按钮边框长度-->
+        <attr name="itemFiveButtonLength" format="dimension" />
+        <!-- 子项内容左距离-->
+        <attr name="itemFiveTextMarginStart" format="dimension" />
+        <!-- 字体内容上距离-->
+        <attr name="itemFiveTextMarginTop" format="dimension" />
+        <!-- 全选颜色-->
+        <attr name="itemFiveSelectAllTextColor" format="color" />
+        <!-- 全选按钮文字大小-->
+        <attr name="itemFiveSelectAllTextSize" format="dimension" />
+        <!-- 全选按钮左距离-->
+        <attr name="itemFiveSelectAllTextMarginStart" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,28 @@
+```
+lb@lbpc:~/Desktop/code/Hospital$ lonbon_unpack.sh
+/home/lb/Desktop/code/Hospital
+/home/lb/Desktop/code/Hospital/cmd/pack-util
+1:打包(P)
+2:仅打包(OP)
+3:解包(U)
+请输入需要使用的模式(1~3):3
+请输入文件名（含完整路径）：/home/lb/Desktop/code/Hospital/cmd/unpack/Android版医院主机-1.1.1_3_20200813_1635.lonbon
+/home/lb/Desktop/code/Hospital/cmd/unpack/Android版医院主机-1.1.1_3_20200813_1635.7z
+解包成功...................success
+```
+
+/home/lb/Desktop/code/Hospital/cmd/pack/Android版医院主机-1.1.1_3_20200813_1635.lonbon
+
+lonbon_unpack.sh
+```
+pwd
+gnome-terminal -t "lonbon_unpack_sub" -x bash -c "sh cmd/lonbon_unpack_sub.sh;exec bash;"
+```
+
+lonbon_unpack_sub.sh
+```
+pwd
+cd cmd/pack-util/
+pwd
+./lbAutoPack
+```

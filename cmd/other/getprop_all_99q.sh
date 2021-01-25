@@ -1,0 +1,1 @@
+adb -s 192.168.5.156:5555 shell getprop > 99q_prop.txt
