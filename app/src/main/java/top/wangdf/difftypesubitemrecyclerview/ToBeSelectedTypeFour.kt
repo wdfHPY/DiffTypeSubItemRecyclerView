@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.*
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.core.view.marginStart
@@ -27,6 +28,7 @@ class ToBeSelectedTypeFour : View {
     private var itemSelectAllTextMarginStart: Int = -1
     private var itemSelectAllTextSize: Int = -1
     private var itemSelectAllTextColor: Int = -1
+    lateinit var listener: ItemViewClickListener
 
     private lateinit var mDashLinePaint: Paint //虚线绘笔
 
@@ -79,7 +81,7 @@ class ToBeSelectedTypeFour : View {
                             it.getDimensionPixelSize(temp, -1)
                         R.styleable.ToBeSelectedTypeFive_itemFiveButtonColor -> itemButtonColor =
                             it.getColor(temp, -1)
-                        R.styleable.ToBeSelectedTypeFive_itemFiveButtonLength-> itemButtonBorderLength =
+                        R.styleable.ToBeSelectedTypeFive_itemFiveButtonLength -> itemButtonBorderLength =
                             it.getDimensionPixelSize(temp, -1)
                         R.styleable.ToBeSelectedTypeFive_itemFiveButtonMarginTop -> itemButtonMarginTop =
                             it.getDimensionPixelSize(temp, -1)
@@ -196,7 +198,7 @@ class ToBeSelectedTypeFour : View {
         canvas?.drawText(
             itemText,
             itemTextMarginStart.toFloat(),
-            (height  + itemTextSize) / 2.2F,
+            (height + itemTextSize) / 2.2F,
             mTextPaint
         )
     }
@@ -240,13 +242,28 @@ class ToBeSelectedTypeFour : View {
         canvas?.drawText(
             "全选",
             itemSelectAllTextMarginStart - marginStart.toFloat(),
-            (height  + itemSelectAllTextSize) / 2.2F,
+            (height + itemSelectAllTextSize) / 2.2F,
             mSelectAllTextPaint
         )
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        when
+        when (event?.action) {
+            MotionEvent.ACTION_DOWN -> {
+                //判断x轴上的坐标的范围是否合乎范围.比绘制的字体范围要稍大一些.左/右边分别多出0.6个TextSize.
+                if (event.x >= (itemSelectAllTextMarginStart - marginStart - itemSelectAllTextSize * 0.6) && event.x <= (itemSelectAllTextMarginStart - marginStart + 2.6F * itemSelectAllTextSize)) {
+                    listener.selectClick()
+                    return true
+                } else if ((event.x >= (itemButtonMarginStart - itemButtonBorderLength * 0.5) && event.x <= (itemButtonMarginStart + itemButtonBorderLength * 1.5)) &&
+                    (event.y >= (itemButtonMarginTop - itemButtonBorderLength * 0.5) && event.y <= (itemButtonMarginTop + itemButtonBorderLength * 1.5))
+                ) {
+                    listener.iconClick()
+                    return true
+                } else {
+                    return false
+                }
+            }
+        }
         return super.onTouchEvent(event)
     }
 }

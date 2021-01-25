@@ -162,7 +162,7 @@ class ToBeSelectedTypeOne : View {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
             MotionEvent.ACTION_DOWN -> {
-                //进判断x轴上的坐标的范围是否合乎范围.比绘制的字体范围要稍大一些.左/右边分别多出0.6个TextSize.
+                //判断x轴上的坐标的范围是否合乎范围.比绘制的字体范围要稍大一些.左/右边分别多出0.6个TextSize.
                 if (event.x >= (itemSelectAllTextMarginStart - itemSelectAllTextSize * 0.6) && event.x <= (itemSelectAllTextMarginStart + 2.6F * itemSelectAllTextSize)) {
                     listener.selectClick()
                     return true

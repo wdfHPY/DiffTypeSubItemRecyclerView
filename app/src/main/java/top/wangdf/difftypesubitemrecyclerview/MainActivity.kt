@@ -13,5 +13,49 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "全选按钮被点击", Toast.LENGTH_SHORT).show()
             }
         }
+
+        findViewById<ToBeSelectedTypeFour>(R.id.itemCusFour).listener = object : ItemViewClickListener {
+            override fun selectClick() {
+                Toast.makeText(this@MainActivity, "全选按钮被点击", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun iconClick(): () -> Unit {
+                Toast.makeText(this@MainActivity, "展开按钮被点击", Toast.LENGTH_SHORT).show()
+                return super.iconClick()
+            }
+        }
+
+        findViewById<ToBeSelectedTypeFive>(R.id.itemCusFive).listener = object : ItemViewClickListener {
+            override fun selectClick() {
+                Toast.makeText(this@MainActivity, "全选按钮被点击", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun iconClick(): () -> Unit {
+                Toast.makeText(this@MainActivity, "展开按钮被点击", Toast.LENGTH_SHORT).show()
+                return super.iconClick()
+            }
+        }
+
+        findViewById<ToBeSelectedTypeSix>(R.id.itemCusSix).listener = object : ItemViewClickListener {
+            override fun selectClick() {
+                Toast.makeText(this@MainActivity, "全选按钮被点击", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun iconClick(): () -> Unit {
+                Toast.makeText(this@MainActivity, "展开按钮被点击", Toast.LENGTH_SHORT).show()
+                return super.iconClick()
+            }
+        }
+
+        findViewById<ToBeSelectedTypeSeven>(R.id.itemCusSeven).listener = object : ItemViewClickListener {
+            override fun selectClick() {
+                Toast.makeText(this@MainActivity, "全选按钮被点击", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun iconClick(): () -> Unit {
+                Toast.makeText(this@MainActivity, "展开按钮被点击", Toast.LENGTH_SHORT).show()
+                return super.iconClick()
+            }
+        }
     }
 }
