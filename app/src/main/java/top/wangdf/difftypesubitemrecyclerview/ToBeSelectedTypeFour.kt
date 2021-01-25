@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.*
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.view.View
 import androidx.core.view.marginStart
 
@@ -242,5 +243,10 @@ class ToBeSelectedTypeFour : View {
             (height  + itemSelectAllTextSize) / 2.2F,
             mSelectAllTextPaint
         )
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        when
+        return super.onTouchEvent(event)
     }
 }

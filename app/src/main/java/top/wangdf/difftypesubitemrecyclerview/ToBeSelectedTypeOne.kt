@@ -1,10 +1,13 @@
 package top.wangdf.difftypesubitemrecyclerview
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.*
 import android.graphics.Paint.ANTI_ALIAS_FLAG
 import android.util.AttributeSet
+import android.util.Log
+import android.view.MotionEvent
 import android.view.View
 
 
@@ -23,7 +26,8 @@ class ToBeSelectedTypeOne : View {
     private var itemMainTextMarginTop: Int = -1
     private var itemSelectAllTextColor: Int = -1
     private var itemSelectAllTextSize: Int = -1
-    private var itemSelectAllTMarginStart: Int = -1
+    private var itemSelectAllTextMarginStart: Int = -1
+    lateinit var listener: ItemViewClickListener
 
     private lateinit var mPath: Path //DashLine Path原语
 
@@ -70,7 +74,7 @@ class ToBeSelectedTypeOne : View {
                             it.getColor(temp, -1)
                         R.styleable.ToBeSelectedTypeOne_itemSelectAllTextSize -> itemSelectAllTextSize =
                             it.getDimensionPixelSize(temp, -1)
-                        R.styleable.ToBeSelectedTypeOne_itemSelectAllTMarginStart -> itemSelectAllTMarginStart =
+                        R.styleable.ToBeSelectedTypeOne_itemSelectAllTMarginStart -> itemSelectAllTextMarginStart =
                             it.getDimensionPixelSize(temp, -1)
                     }
                 }
@@ -119,7 +123,7 @@ class ToBeSelectedTypeOne : View {
     private fun drawSelectText(canvas: Canvas?) {
         canvas?.drawText(
             "全选",
-            itemSelectAllTMarginStart.toFloat(),
+            itemSelectAllTextMarginStart.toFloat(),
             (itemMainTextMarginTop + itemMainTextSize).toFloat(),
             mSelectAllTextPaint
         )
@@ -153,5 +157,20 @@ class ToBeSelectedTypeOne : View {
             (itemMainTextMarginTop + itemMainTextSize).toFloat(),
             mContentTextPaint
         )
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        when (event?.action) {
+            MotionEvent.ACTION_DOWN -> {
+                //进判断x轴上的坐标的范围是否合乎范围.比绘制的字体范围要稍大一些.左/右边分别多出0.6个TextSize.
+                if (event.x >= (itemSelectAllTextMarginStart - itemSelectAllTextSize * 0.6) && event.x <= (itemSelectAllTextMarginStart + 2.6F * itemSelectAllTextSize)) {
+                    listener.selectClick()
+                    return true
+                } else {
+                    return false
+                }
+            }
+        }
+        return super.onTouchEvent(event)
     }
 }
